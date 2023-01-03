@@ -11,6 +11,7 @@ import Hotstar from "./Images/ProjectHotstar.png";
 import DigitalClock from "./Images/ProjectDigital.png";
 import formore from "./Images/Click.png";
 import Shubham2 from "./Images/Shubham2.jpg";
+import LoginRegister from "./Images/MERNLoginRegister.png";
 const Data = {
   SocialLogo: [
     {
@@ -46,17 +47,26 @@ const Data = {
   Shubham2,
   Project: [
     {
-      text: "Portfolio",
+      text: "Portfolio(MERN)",
       Image: Portfolio,
       link: "https://shubhamjoshii.github.io/Portfolio2.0/",
+      Github: "https://github.com/ShubhamJoshii/Portfolio2.0",
       para: "Language Use ",
       LanguageUse: ["HTML", "CSS", "React JS"],
     },
     {
+      text: "Login-Register (MERN)",
+      Image: LoginRegister,
+      link: "https://mern-project-ten.vercel.app/",
+      Github: "https://github.com/ShubhamJoshii/LoginRegister",
+      para: "I Made this project With React routing,Node(Cookie-Parser,Mongoose,JSONwebtoken,bcrypt) and many More",
+      LanguageUse: ["React", "Node", "Express", "Mongodb"],
+    },
+    {
       text: "Hotstar Clone",
-
       Image: Hotstar,
       link: "https://shubhamjoshii.github.io/Hotstar-Clone/",
+      Github: "https://github.com/ShubhamJoshii/Hotstar-Clone",
       para: "Language Use ",
       LanguageUse: ["HTML", "CSS", "React JS"],
     },
@@ -64,6 +74,7 @@ const Data = {
       text: "Quotes Generator",
       Image: Quotes,
       link: "https://shubhamjoshii.github.io/quotesGenerator/",
+      Github: "https://github.com/ShubhamJoshii/quotesGenerator",
       para: "Language Use ",
       LanguageUse: ["HTML", "CSS", "React JS"],
     },
@@ -71,6 +82,7 @@ const Data = {
       text: "Digital Clock",
       Image: DigitalClock,
       link: "https://shubhamjoshii.github.io/Digital-Clock/",
+      Github: "https://github.com/ShubhamJoshii/Digital-Clock",
       para: "Language Use ",
       LanguageUse: ["HTML", "CSS", "React JS"],
     },
@@ -78,6 +90,7 @@ const Data = {
       text: "Password Generator",
       Image: Password,
       link: "https://shubhamjoshii.github.io/PasswordGenerator/",
+      Github: "https://github.com/ShubhamJoshii/PasswordGenerator",
       para: "Language Use ",
       LanguageUse: ["HTML", "CSS", "React JS"],
     },
@@ -85,13 +98,14 @@ const Data = {
       text: "For more Click Here!",
       Image: formore,
       link: "https://github.com/ShubhamJoshii",
+      Github: "https://github.com/ShubhamJoshii",
     },
   ],
-  Certificate : [
+  Certificate: [
     {
-      text : "NPTEL",
-      para : "National Programme on Technology Enhanced Learning (NPTEL)",
-    }
+      text: "NPTEL",
+      para: "National Programme on Technology Enhanced Learning (NPTEL)",
+    },
   ],
   TopicData: {
     Skills: [

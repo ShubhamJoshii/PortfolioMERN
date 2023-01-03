@@ -1,10 +1,29 @@
 import Data from "./AllData";
-import NavChanger from "./Images/NavChanger.png"
+import "./Header.css";
+// import NavChanger from "./Images/NavChanger.png"
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
 const HeaderTop = () => {
-    const Change = () => {
-        console.log("Hello World");
-    }
+  const [show, setShow] = useState(true);
+  let navigate = useNavigate();
 
+  const logoutBtn = async () => {
+    const res = await fetch("/logout", {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+    })
+      .then(() => {
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div className="Header">
       <h1>
@@ -38,7 +57,12 @@ const HeaderTop = () => {
             {Data.Project.map((curr, id) => {
               return (
                 <li>
-                  <a href={curr.link}  key={id} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={curr.link}
+                    key={id}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {curr.text}
                   </a>
                 </li>
@@ -46,16 +70,29 @@ const HeaderTop = () => {
             })}
           </ul>
         </li>
-        <li>
+        {/* <li>
           <a href={Data.resume} target="_blank" rel="noopener noreferrer">
             Resume
           </a>
-        </li>
-        <li>
-        <a href="#">
-            <img onClick={Change} src={NavChanger} id="navChanger" alt="Img" width="20px"/>
-        </a>
-        </li>
+        </li> */}
+        <div className="loginRegister">
+          <button
+            onClick={() => {
+              show === true ? navigate("/login") : logoutBtn();
+              show === true ? setShow(false):setShow(true)
+            }}
+          >
+            {show === true ? "Sign in":"Logout"}
+          </button>
+          {/* // <button onClick={logoutBtn}>Logout</button> */}
+          <button
+            onClick={() => {
+              navigate("/register");
+            }}
+          >
+            Register
+          </button>
+        </div>
       </ol>
       <div className="burgerOuter">
         <div className="burger">
@@ -64,7 +101,6 @@ const HeaderTop = () => {
           <div className="BurgerLine"></div>
         </div>
       </div>
-      
     </div>
   );
 };

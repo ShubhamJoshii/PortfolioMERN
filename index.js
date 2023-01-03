@@ -1,9 +1,14 @@
 const express = require("express")
 const mongoose = require("mongoose")
+const cookieParser = require("cookie-parser")
 const path = require("path");
 const app = express();
 
+// for taking existing Cookies from Frontend
+app.use(cookieParser())
 app.use(express.json());
+
+
 const User = require("./Database")
 app.use(require("./auth"))
 

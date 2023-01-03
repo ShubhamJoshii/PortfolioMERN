@@ -1,0 +1,20 @@
+.loginRegister button{
+    background:none;
+    color: #0f3d3e;
+    font-size: 15px;
+    font-weight: bolder;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    width: 80px;
+}
+
+.loginRegister button:hover{
+    transform: scale(1.01);
+    border-bottom:3px solid red;
+    border-top:3px solid red;
+    border-radius: 7px;
+}
+
+
+

@@ -1,0 +1,71 @@
+.RegisterContainer{
+    padding-top: 6vh;
+    background-color: #0f3d3e;
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Register{
+    background-color: #121418;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    width: 70vw;
+}
+
+.Register h1{
+    margin-bottom: 10px;
+}
+
+.RegisterForm{
+    display: flex;
+    justify-content: center;
+    width: 70vw;
+    /* height: 230px; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Register #submitBTN{
+    text-align: center;
+    font-weight: 700;
+    width: 50%;
+    padding: 10px;
+    font-size: 17px;
+    color: white;
+    margin: 10px 0px;
+    background: linear-gradient(to right, #0f3d3e,#00e1ff7a);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.Register #submitBTN:hover{
+    transform: scale(1.1);
+}
+
+.RegisterForm form{
+    width: 660px;
+    margin-top: 50px;
+}
+
+.RegisterForm #RegisterInput{
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 700;
+    width: 330px;
+    /* width: 50%; */
+    padding: 5px;
+    font-size: 17px;
+    color: white;
+    margin: 10px 0px;
+    background: rgb(42, 39, 39);
+    outline: none;
+    border: none;
+}
+
+

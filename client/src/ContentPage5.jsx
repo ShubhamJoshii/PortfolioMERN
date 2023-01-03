@@ -4,6 +4,7 @@ import Data from "./AllData";
 import Phone from "./Images/phone.png";
 import Gmail from "./Images/Gmail.png";
 import { useState } from "react";
+import { useEffect } from "react";
 // import axios from "axios";
 
 const ContentPage5 = () => {
@@ -23,25 +24,40 @@ const ContentPage5 = () => {
     e.preventDefault();
     const { name, email, message } = contactData;
     console.log(name,email,message)
+    const res = await fetch("/contactMessage",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({name, email, message})
+    })
+    const Data = await res.json();
+    alert(Data.message)
+    setContactData({message:" "})
+  };
+
+  const loadCookies = async ()=>{
     try {
       const res = await fetch("/contact",{
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({name,email,message})
+        body: JSON.stringify()
       });
       const data = await res.json();
-      if(data){
-        alert("Message Send")
-      }else{
-        alert("Message Not Send")
-      }
+      setContactData({...contactData,name:data.name,email:data.email})
     } catch (err) {
       console.log(err);
     }
-  };
-
+  }
+  useEffect(()=>{
+    loadCookies()
+    console.log("Loading")
+  },[])
+  useEffect(()=>{
+    console.log(contactData)
+  },[contactData])
   return (
     <div className="ContentPage5" id="">
       <div className="Contact1">
@@ -91,6 +107,7 @@ const ContentPage5 = () => {
             type="text"
             placeholder="Your Name"
             name="name"
+            value={contactData.name}
             onChange={handleInput}
           />
           <br />
@@ -98,6 +115,7 @@ const ContentPage5 = () => {
             type="text"
             placeholder="Your Email"
             name="email"
+            value={contactData.email}
             onChange={handleInput}
           />
           <br />
@@ -105,6 +123,7 @@ const ContentPage5 = () => {
             name="message"
             id="MessageUser"
             cols="30"
+            value={contactData.message}
             rows="10"
             placeholder="Your Message"
             onChange={handleInput}
