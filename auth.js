@@ -4,16 +4,8 @@ const User = require("./Database")
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 const Authenication = require("./Authenication")
-// router.post("/contact",async (req,res)=>{
-//     const {name,email,message} = req.body;
-//     console.log(name,email,message);
-//     try{
-//         const userData = new User({name,email,message});
-//         await userData.save()
-//     }catch(err){
-//         console.log(err)
-//     }
-// })
+
+
 
 router.post("/register", async (req, res) => {
     const {name,email,phone,occupation,gender,password,Cpassword} = req.body;
@@ -89,6 +81,10 @@ router.post("/contactMessage",Authenication,async(req,res)=>{
         console.log(err)
         res.send({message:"User Not Registered"})
     }
+})
+
+router.get("/home",Authenication,(req,res)=>{
+    res.send(req.rootUser)
 })
 
 router.get("/logout", (req, res) => {

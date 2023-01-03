@@ -3,11 +3,17 @@ import "./Header.css";
 // import NavChanger from "./Images/NavChanger.png"
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useEffect } from "react";
 // import { useNavigate } from "react-router-dom";
 const HeaderTop = () => {
   const [show, setShow] = useState(true);
+  const [userName,setUserName] = useState("UN")
   let navigate = useNavigate();
 
+  const signinOUT = ()=>{
+    show === true ? navigate("/login") : logoutBtn()
+    setShow(!show)
+  }
   const logoutBtn = async () => {
     const res = await fetch("/logout", {
       method: "GET",
@@ -16,26 +22,46 @@ const HeaderTop = () => {
         "Content-Type": "application/json",
       },
       credentials: "include",
+    }).then(() => {
+      navigate("/");
     })
-      .then(() => {
-        navigate("/");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    .catch((err) => {
+      console.log(err);
+    });
   };
+  const userDP = (name)=>{
+    const x = name.split(' ').map(x => x[0]).join('');
+    return x;
+  }
+  const userData = async()=>{
+    const res = await fetch("/home",{
+      // method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify()
+    })
+    const data = await res.json()
+    const DPname = userDP(data.name)
+    setUserName(DPname)
+    setShow(!show)
+    }
+
+  useEffect(()=>{
+    userData()
+  },[])
+
   return (
     <div className="Header">
       <h1>
         <a href="#home">SHUBHAM JOSHI</a>
       </h1>
-
       <ol className="Orderheader">
-        <li>
-          <a href="#home">Home</a>
+        <li onClick={()=>navigate("/")}>
+          Home
         </li>
         <li>
-          <a href="#AboutMe">About Us</a>
+          About Us
         </li>
         <li>
           Contact
@@ -75,25 +101,15 @@ const HeaderTop = () => {
             Resume
           </a>
         </li> */}
-        <div className="loginRegister">
-          <button
-            onClick={() => {
-              show === true ? navigate("/login") : logoutBtn();
-              show === true ? setShow(false):setShow(true)
-            }}
-          >
-            {show === true ? "Sign in":"Logout"}
-          </button>
-          {/* // <button onClick={logoutBtn}>Logout</button> */}
-          <button
-            onClick={() => {
-              navigate("/register");
-            }}
-          >
-            Register
-          </button>
-        </div>
+        
       </ol>
+      <div className="userDP">
+          {userName}
+          <div className="loginRegister">
+            <h3 onClick={signinOUT}>{show == true ? "Sign in" : "Logout"}</h3>
+            <h3 onClick={()=>navigate("/register")}>Register</h3>
+          </div>
+        </div>
       <div className="burgerOuter">
         <div className="burger">
           <div className="BurgerLine"></div>

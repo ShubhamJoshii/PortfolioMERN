@@ -16,5 +16,53 @@
     border-radius: 7px;
 }
 
+.userDP{
+    background-color: #0f3d3e;
+    border-radius: 50%;
+    font-size: 25px;
+    padding: 3px;
+    width: 30px;
+    position: fixed;
+    overflow: hidden;
+    right: 30px;
+    top: 7px;
+    font-family: monospace;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.userDP:hover .loginRegister{
+    display: block;
+}
+.loginRegister{
+    display: none;
+    position: fixed;
+    right: 2vw;
+    top: 5vh;
+    background-color: rgba(0, 0, 0, 0.445);
+    width: 110px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
 
+.loginRegister h3{
+    font-size: 17px;
+    font-weight: 500;
+    font-family:'Courier New', Courier, monospace;
+    padding: 3px 6px;
+    cursor: pointer;
+}
+.loginRegister h3:hover{
+    background-color: black;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 655px){
+    .userDP{
+        right: 13vw;
+    }
+}

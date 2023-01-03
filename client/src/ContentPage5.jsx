@@ -3,9 +3,7 @@ import Data from "./AllData";
 // import Phone from "./Images/ContactPhone.png";
 import Phone from "./Images/phone.png";
 import Gmail from "./Images/Gmail.png";
-import { useState } from "react";
-import { useEffect } from "react";
-// import axios from "axios";
+import { useState,useEffect } from "react";
 
 const ContentPage5 = () => {
   const [contactData, setContactData] = useState({
@@ -23,7 +21,7 @@ const ContentPage5 = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, message } = contactData;
-    console.log(name,email,message)
+    // console.log(name,email,message)
     const res = await fetch("/contactMessage",{
       method:"POST",
       headers:{
@@ -53,11 +51,8 @@ const ContentPage5 = () => {
   }
   useEffect(()=>{
     loadCookies()
-    console.log("Loading")
   },[])
-  useEffect(()=>{
-    console.log(contactData)
-  },[contactData])
+
   return (
     <div className="ContentPage5" id="">
       <div className="Contact1">

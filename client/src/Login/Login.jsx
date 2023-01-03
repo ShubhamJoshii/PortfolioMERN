@@ -1,11 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import appleLogo from "../Images/AppleLogo.png";
 import Facebook from "../Images/FacebookWhite.png";
 import Google from "../Images/googleLogo.png";
 import "./Login.css";
+
 function Login() {
     const [loginData,setLoginData] = useState({})
+    let navigate = useNavigate();
     const handleInput = (e)=>{
+
         const name = e.target.name;
         const value = e.target.value;
         setLoginData({...loginData,[name]:value})
@@ -24,9 +28,11 @@ function Login() {
             })
             const Data = await res.json()
             alert(Data.message)
+            navigate("/")
           } catch(err){
-          alert("User Not Registered")
-          console.log(err)
+            alert("User Not Registered")
+            navigate("/register")
+            console.log(err)
         }
     }
   return (
@@ -65,7 +71,7 @@ function Login() {
             </div>
           </div>
         </div>
-        <p>Forget Password?</p>
+        <p id="forget">Forget Password?</p>
       </div>
     </div>
   );
