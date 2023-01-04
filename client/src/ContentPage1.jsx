@@ -1,12 +1,9 @@
-// import { useEffect } from "react";
 import Data from "./AllData";
 import arrowDown from "./Images/Arrowdown.gif";
 import React from "react";
-// import { click } from "@testing-library/user-event/dist/click";
 import moon from "./Images/moon.png"
 import sun from "./Images/sun.png"
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState,useEffect } from "react";
 
 const ContentPage1 = () => {
   const [mode, setMode] = useState("darkmode")
@@ -14,7 +11,7 @@ const ContentPage1 = () => {
   let NameText = "Shubham Joshi";
   let i = 0 , count = 0;
   useEffect(()=>{
-    
+    // window.location.reload(false);
     setInterval(() => {
       if (i < NameText.length) {
         document.getElementsByClassName("AutoType")[0].innerHTML += NameText[i];
@@ -59,12 +56,10 @@ const ContentPage1 = () => {
         <div className="First_second">
           <h2>Hi there! I'm</h2>
           <h1>
-            {/* <span id="TextPara2">Shubham</span> Joshi{" "} */}
-            {/* Shubham Joshi */}
+            {/* <span id="TextPara2">Shubham</span> Joshi{" "}
+            Shubham Joshi */}
             <span className="AutoType" id="TextPara2"></span>
-            <span className="AutotypeRemove" id="TextPara2">
-              |
-            </span>
+            <span className="AutotypeRemove" id="TextPara2">|</span>
           </h1>
           <h2>
             A <span id="TextPara3">Front-End Web Developer</span> passionate

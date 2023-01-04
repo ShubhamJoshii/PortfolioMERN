@@ -15,6 +15,7 @@ const HeaderTop = () => {
     setShow(!show)
   }
   const logoutBtn = async () => {
+    
     const res = await fetch("/logout", {
       method: "GET",
       headers: {
@@ -24,6 +25,7 @@ const HeaderTop = () => {
       credentials: "include",
     }).then(() => {
       navigate("/");
+      window.location.reload(false);
     })
     .catch((err) => {
       console.log(err);
@@ -106,7 +108,7 @@ const HeaderTop = () => {
       <div className="userDP">
           {userName}
           <div className="loginRegister">
-            <h3 onClick={signinOUT}>{show == true ? "Sign in" : "Logout"}</h3>
+            <h3 onClick={signinOUT}>{show === true ? "Sign in" : "Logout"}</h3>
             <h3 onClick={()=>navigate("/register")}>Register</h3>
           </div>
         </div>

@@ -3,38 +3,59 @@ import { useNavigate } from "react-router-dom";
 import appleLogo from "../Images/AppleLogo.png";
 import Facebook from "../Images/FacebookWhite.png";
 import Google from "../Images/googleLogo.png";
+import userLogo from "../Images/userLogo.png";
+import lockLogo from "../Images/lockLogo.png";
+import eyeOpen from "../Images/eyeOpen.png";
+import eyeClose from "../Images/eyeClose.png";
+
 import "./Login.css";
 
 function Login() {
-    const [loginData,setLoginData] = useState({})
-    let navigate = useNavigate();
-    const handleInput = (e)=>{
+  const [loginData, setLoginData] = useState({});
+  let navigate = useNavigate();
+  const handleInput = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setLoginData({ ...loginData, [name]: value });
+  };
+  const handleInputData = async (e) => {
+    e.preventDefault();
+    // console.log(loginData)
+    const { email, password } = loginData;
+    try {
+      const res = await fetch("/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+      const Data = await res.json();
+      alert(Data.message);
+      if (Data.message === "User Login") {
+        navigate("/");
+        window.location.reload(false);
+      }
+    } catch (err) {
+      alert("User Not Registered");
+      navigate("/register");
+      console.log(err);
+    }
+  };
 
-        const name = e.target.name;
-        const value = e.target.value;
-        setLoginData({...loginData,[name]:value})
+  const passwordShow = ()=>{
+    let a = document.getElementsByClassName("password")[0];
+    let b = document.getElementById("passwordShow");
+    if(a.type === "password"){
+      a.type="text";
+      b.src=eyeOpen;  
     }
-    const handleInputData = async(e)=>{
-        e.preventDefault()
-        // console.log(loginData)
-        const{email,password} = loginData;
-        try{
-            const res = await fetch("/login",{
-                method:"POST",
-                headers:{
-                    "Content-Type":"application/json"
-                },
-                body:JSON.stringify({email,password})
-            })
-            const Data = await res.json()
-            alert(Data.message)
-            navigate("/")
-          } catch(err){
-            alert("User Not Registered")
-            navigate("/register")
-            console.log(err)
-        }
-    }
+    else{
+      a.type="password";
+      b.src=eyeClose;
+    }  
+  }
+
   return (
     <div className="LoginContainer">
       <div className="login">
@@ -47,11 +68,42 @@ function Login() {
         <div className="loginForm">
           <form action="" method="POST">
             <h1>Login Details</h1>
-            <input type="text" placeholder="Enter Email ID" name="email" id="loginInput" onChange={handleInput} />
+            <div className="loginInput_Div">
+              <img src={userLogo} width="20px" alt="" />
+              <input
+                type="text"
+                placeholder="Enter Email ID"
+                name="email"
+                id="loginInput"
+                onChange={handleInput}
+              />
+            </div>
             <br />
-            <input type="text" placeholder="Enter Password" name="password" id="loginInput" onChange={handleInput} />
-            <br />
-            <input type="submit" value="Sign in Your Account" id="submitBTN" onClick={handleInputData}/>
+            <div className="loginInput_Div">
+              <img src={lockLogo} width="18px" alt="" />
+              <input
+                type="password"
+                placeholder="Enter Password"
+                name="password"
+                id="loginInput"
+                className="password"
+                onChange={handleInput}
+              />
+              <img
+                src={eyeClose}
+                alt=""
+                width="20px"
+                onClick={passwordShow}
+                id="passwordShow"
+              />
+              <br />
+            </div>
+            <input
+              type="submit"
+              value="Sign in Your Account"
+              id="submitBTN"
+              onClick={handleInputData}
+            />
           </form>
           <div className="loginType">
             <div className="loginTypeDiv">
