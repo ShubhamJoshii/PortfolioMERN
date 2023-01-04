@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1d6c0dcf.css",
-    "main.js": "/static/js/main.963d0171.js",
+    "main.css": "/static/css/main.0b1627b5.css",
+    "main.js": "/static/js/main.c102c4dc.js",
     "static/media/Shubham2.jpg": "/static/media/Shubham2.6ae3da1dc366b0b3efda.jpg",
     "static/media/ProjectPortfolio.png": "/static/media/ProjectPortfolio.bbcb824e35222d666bb5.png",
     "static/media/ProjectHotstar.png": "/static/media/ProjectHotstar.c355847d0fa0a185696f.png",
@@ -20,17 +20,16 @@
     "static/media/Twitter.png": "/static/media/Twitter.b6f83ddcc4bdb3893fb1.png",
     "static/media/MERNLoginRegister.png": "/static/media/MERNLoginRegister.b03fbf2a5f73a8419496.png",
     "static/media/ContactPhone.png": "/static/media/ContactPhone.8d85b0cab25436b01346.png",
-    "static/media/googleLogo.png": "/static/media/googleLogo.373c19356686081a2852.png",
     "static/media/eyeClose.png": "/static/media/eyeClose.69a25593529fcf819398.png",
     "static/media/lockLogo.png": "/static/media/lockLogo.bab343175c33d1ad1952.png",
     "static/media/userLogo.png": "/static/media/userLogo.f084cffb3e3785110a05.png",
     "static/media/eyeOpen.png": "/static/media/eyeOpen.49c32772de90ed3977e6.png",
     "index.html": "/index.html",
-    "main.1d6c0dcf.css.map": "/static/css/main.1d6c0dcf.css.map",
-    "main.963d0171.js.map": "/static/js/main.963d0171.js.map"
+    "main.0b1627b5.css.map": "/static/css/main.0b1627b5.css.map",
+    "main.c102c4dc.js.map": "/static/js/main.c102c4dc.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d6c0dcf.css",
-    "static/js/main.963d0171.js"
+    "static/css/main.0b1627b5.css",
+    "static/js/main.c102c4dc.js"
   ]
 }

@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import appleLogo from "../Images/AppleLogo.png";
-import Facebook from "../Images/FacebookWhite.png";
-import Google from "../Images/googleLogo.png";
-import userLogo from "../Images/userLogo.png";
-import lockLogo from "../Images/lockLogo.png";
-import eyeOpen from "../Images/eyeOpen.png";
-import eyeClose from "../Images/eyeClose.png";
-
+// import appleLogo from "../Images/AppleLogo.png";
+// import Facebook from "../Images/FacebookWhite.png";
+// import Google from "../Images/googleLogo.png";
+// import userLogo from "../Images/userLogo.png";
+// import lockLogo from "../Images/lockLogo.png";
+// import eyeOpen from "../Images/eyeOpen.png";
+// import eyeClose from "../Images/eyeClose.png";
+import { FaFacebookF,FaGoogle,FaApple,FaUserAlt,FaLock,FaEye,FaEyeSlash} from "react-icons/fa";
 import "./Login.css";
 
 function Login() {
   const [loginData, setLoginData] = useState({});
+  // const [eye,setEye] = useState(<FaEyeSlash id="passwordShow"/>)
+  const [eye,setEye] = useState(true)
   let navigate = useNavigate();
   const handleInput = (e) => {
     const name = e.target.name;
@@ -45,14 +47,16 @@ function Login() {
 
   const passwordShow = ()=>{
     let a = document.getElementsByClassName("password")[0];
-    let b = document.getElementById("passwordShow");
+    // let b = document.getElementById("passwordShow");
     if(a.type === "password"){
       a.type="text";
-      b.src=eyeOpen;  
+      // b.src=eyeOpen; 
+      setEye(false) 
     }
     else{
       a.type="password";
-      b.src=eyeClose;
+      // b.src=eyeClose;
+      setEye(true) 
     }  
   }
 
@@ -69,7 +73,8 @@ function Login() {
           <form action="" method="POST">
             <h1>Login Details</h1>
             <div className="loginInput_Div">
-              <img src={userLogo} width="20px" alt="" />
+              {/* <img src={userLogo} width="20px" alt="" /> */}
+              <FaUserAlt />
               <input
                 type="text"
                 placeholder="Enter Email ID"
@@ -80,7 +85,8 @@ function Login() {
             </div>
             <br />
             <div className="loginInput_Div">
-              <img src={lockLogo} width="18px" alt="" />
+              {/* <img src={lockLogo} width="18px" alt="" /> */}
+              <FaLock />
               <input
                 type="password"
                 placeholder="Enter Password"
@@ -89,13 +95,17 @@ function Login() {
                 className="password"
                 onChange={handleInput}
               />
-              <img
+              {/* <img
                 src={eyeClose}
                 alt=""
                 width="20px"
                 onClick={passwordShow}
                 id="passwordShow"
-              />
+              /> */}
+              {/* <FaEye onClick={passwordShow} id="passwordShow"/> */}
+              {/* <FaEyeSlash onClick={passwordShow} id="passwordShow"/>
+              {/* <eye onClick={passwordShow} id="passwordShow"/> */}
+              {eye === true ? <FaEyeSlash onClick={passwordShow} id="passwordShow"/> : <FaEye onClick={passwordShow} id="passwordShow"/>}
               <br />
             </div>
             <input
@@ -108,17 +118,24 @@ function Login() {
           <div className="loginType">
             <div className="loginTypeDiv">
               <div>
-                <img src={Google} alt="" width="20px" /> Sign in with Google
+                {/* <img src={Google} alt="" width="20px" />  */}
+                <FaGoogle id="loginTypeAwesome"/>
+                Sign in with Google
               </div>
             </div>
             <div className="loginTypeDiv">
               <div>
-                <img src={Facebook} alt="" width="20px" /> Sign in with Facebook
+                {/* <img src={Facebook} alt="" width="20px" />  */}
+                <FaFacebookF  id="loginTypeAwesome"/>
+                Sign in with Facebook
+
               </div>
             </div>
             <div className="loginTypeDiv">
               <div>
-                <img src={appleLogo} alt="" width="20px" /> Sign in with Apple
+                {/* <img src={appleLogo} alt="" width="20px" /> */}
+                <FaApple  id="loginTypeAwesome"/>
+                 Sign in with Apple
               </div>
             </div>
           </div>
