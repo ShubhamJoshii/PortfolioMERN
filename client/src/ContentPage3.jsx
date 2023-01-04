@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import Data from "./AllData";
-import ArrowUp from "./Images/ArrowUp.png"
+import {FaArrowUp} from "react-icons/fa";
+
 const ContentPage3 = () => {
   // let i = TopicData.Skills;
   const [Count, setCount] = useState(0);
@@ -137,17 +138,10 @@ const ContentPage3 = () => {
               );
             })}
           </div>
-
-          {/* <p id="topic">{TopicData.Topic[i]}</p>
-          <p>Designing Web Interfaces</p>
-          <p id="topic">{TopicData.Topic[i+1]}</p>
-          <p>Web App Development</p>
-          <p id="topic">{TopicData.Topic[i+2]}</p> */}
-          {/* <p>Buliding Android Apps</p> */}
-        </div>
+      </div>
       </div>
       <a href="#home" id="ToTopBtn">
-          <img src={ArrowUp} alt="Arrowup" width="50vw" />
+          <FaArrowUp />
       </a>
     </div>
   );

@@ -1,13 +1,11 @@
 import Data from "./AllData";
 import arrowDown from "./Images/Arrowdown.gif";
 import React from "react";
-import moon from "./Images/moon.png"
-import sun from "./Images/sun.png"
 import { useState,useEffect } from "react";
+import { MdDarkMode,MdLightMode } from "react-icons/md";
 
 const ContentPage1 = () => {
   const [mode, setMode] = useState("darkmode")
-  const [modeLogo,setmodeLogo] = useState(sun)
   let NameText = "Shubham Joshi";
   let i = 0 , count = 0;
   useEffect(()=>{
@@ -37,7 +35,6 @@ const ContentPage1 = () => {
 
   const modeChanger = ()=>{
     (mode === "darkmode") ? (setMode("lightmode")) : (setMode("darkmode"));
-    (modeLogo === sun) ? (setmodeLogo(moon)) : (setmodeLogo(sun)); 
   }
 
   useEffect(()=>{
@@ -48,7 +45,7 @@ const ContentPage1 = () => {
     <>
       <div className="ContentPage1" id="home">
         <div className="modeChange" onClick={modeChanger}>
-          <img src={modeLogo} alt="ModechangerImg" width="35px" />
+          {mode === "darkmode" ? <MdLightMode className="modesDarkLight" /> : <MdDarkMode  className="modesDarkLight" />}
         </div>
         <div>
           <img src={Data.MainPageImg} alt="Hello" id="FrontImg" />

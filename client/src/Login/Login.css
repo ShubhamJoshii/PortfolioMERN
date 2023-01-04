@@ -72,7 +72,7 @@
 }
 
 
-.loginForm #loginInput{
+.loginForm .loginInput{
     /* border-radius: 10px; */
     text-align: center;
     font-weight: 700;

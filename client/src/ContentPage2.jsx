@@ -1,10 +1,7 @@
 import Data from "./AllData";
-// import "aos/dist/aos.css"
-import newPage from "./Images/NewPage.png";
-import github from "./Images/github.png";
+import { FaExternalLinkAlt,FaGithub } from "react-icons/fa";
 
 const ContentPage2 = () => {
-  // console.log(Data.Project.LanguageUse[0])
   return (
     <div className="ContentPage2">
       <h1>Projects</h1>
@@ -25,10 +22,11 @@ const ContentPage2 = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <img src={newPage} alt="" width="40px" />
+                        {/* <img src={newPage} alt="" width="40px" /> */}
+                        <FaExternalLinkAlt id="externalLink" />
                       </a>
                       <a href={curr.Github}>
-                        <img src={github} alt="" width="40px" />
+                        <FaGithub  id="externalLink"/>
                       </a>
                     </div>
                   </div>

@@ -241,6 +241,11 @@ li a {
   right: 15px;
 }
 
+.modesDarkLight{
+  font-size: 35px;
+  color: rgb(105, 102, 102);
+}
+
 /* 
 .ContentPage1 #ToTopBtn{
   display: none;
@@ -261,6 +266,11 @@ li a {
 }
 .slideBtn img {
   width: 100px;
+}
+
+#externalLink{
+  font-size: 35px;
+  color: white;
 }
 
 .ContentPage2 h1 {

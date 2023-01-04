@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import userLogo from "../Images/userLogo.png";
-import lockLogo from "../Images/lockLogo.png";
-import eyeOpen from "../Images/eyeOpen.png";
-import eyeClose from "../Images/eyeClose.png";
-import phone from "../Images/ContactPhone.png";
-import workLogo from "../Images/WorkLogo.png";
+import {FaUserAlt,FaLock,FaEye,FaEyeSlash,FaPhoneAlt} from "react-icons/fa";
+import { MdWork } from "react-icons/md";
+
 import "./Register.css";
 function Register() {
+  const [passwordshowBtn,setpasswordShowBtn] = useState(false)
+  const [CpasswordShowBtn,setCasswordShowBtn] = useState(false)
   const [RegisterData, setRegisterData] = useState({});
   let navigate = useNavigate();
   const handleInput = (e) => {
@@ -70,30 +69,30 @@ function Register() {
       }
     }
   };
-  const ConfirmpasswordShow = () => {
-    let a = document.getElementsByClassName("RegisterInput")[6];
-    let b = document.getElementById("ConfirmpasswordShow");
-    if (a.type === "password") {
-      a.type = "text";
-      b.src = eyeOpen;
-    } else {
-      a.type = "password";
-      b.src = eyeClose;
-    }
-  };
-
+  
   const passwordShow = ()=>{
     let a = document.getElementsByClassName("RegisterInput")[5];
-    let b = document.getElementById("passwordShow");
     if(a.type === "password"){
       a.type="text";
-      b.src=eyeOpen;  
+      setpasswordShowBtn(true)
     }
     else{
       a.type="password";
-      b.src=eyeClose;
+      setpasswordShowBtn(false)
     }  
   }
+
+  const ConfirmpasswordShow = () => {
+    let a = document.getElementsByClassName("RegisterInput")[6];
+    if (a.type === "password") {
+      a.type = "text";
+      setCasswordShowBtn(true)
+    } else {
+      a.type = "password";
+      setCasswordShowBtn(false)
+    }
+  };
+  
   return (
     <div className="RegisterContainer">
       <div className="Register">
@@ -105,14 +104,12 @@ function Register() {
         </p>
         <div className="RegisterForm">
           <form action="" method="POST">
-            {/* <h1>Register Details</h1> */}
             <div className="registerInputDiv">
-              <img src={userLogo} alt="" width="20px" />
+              <FaUserAlt />
               <input
                 type="text"
                 placeholder="Enter Username"
                 name="name"
-                id="RegisterInput"
                 className="RegisterInput"
                 autoComplete="on"
                 onChange={handleInput}
@@ -120,12 +117,11 @@ function Register() {
             </div>
             <br />
             <div className="registerInputDiv">
-              <img src={userLogo} alt="" width="20px" />
+              <FaUserAlt />
               <input
                 type="text"
                 placeholder="Enter Email ID"
                 name="email"
-                id="RegisterInput"
                 className="RegisterInput"
                 autoComplete="off"
                 onChange={handleInput}
@@ -133,12 +129,11 @@ function Register() {
             </div>
             <br />
             <div className="registerInputDiv">
-              <img src={phone} alt="" width="20px" />
+              <FaPhoneAlt />
               <input
                 type="text"
                 placeholder="Phone Number"
                 name="phone"
-                id="RegisterInput"
                 autoComplete="on"
                 className="RegisterInput"
                 onChange={handleInput}
@@ -146,12 +141,11 @@ function Register() {
             </div>
             <br />
             <div className="registerInputDiv">
-              <img src={workLogo} alt="" width="20px" />
+              <MdWork />
               <input
                 type="text"
                 placeholder="Occupation"
                 name="occupation"
-                id="RegisterInput"
                 autoComplete="on"
                 className="RegisterInput"
                 onChange={handleInput}
@@ -159,60 +153,45 @@ function Register() {
             </div>
             <br />
             <div className="registerInputDiv">
-              <img src={userLogo} alt="" width="20px" />
+              <FaUserAlt />
               <select
                 name="gender"
                 placeholder="Gender"
-                id="RegisterInput"
                 className="RegisterInput"
                 autoComplete="off"
                 onChange={handleInput}
               >
-                <option value="">Gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
+                <option value="" className="optionGender">Gender</option>
+                <option value="Male" className="optionGender">Male</option>
+                <option value="Female" className="optionGender">Female</option>
+                <option value="Other" className="optionGender">Other</option>
               </select>
             </div>
             <br />
             <div className="registerInputDiv">
-              <img src={lockLogo} alt="" width="18px" />
+              <FaLock />
               <input
                 type="password"
                 placeholder="Password"
                 name="password"
-                id="RegisterInput"
                 autoComplete="off"
                 className="RegisterInput"
                 onChange={handleInput}
               />
-              <img
-                src={eyeClose}
-                alt=""
-                width="20px"
-                onClick={passwordShow}
-                id="passwordShow"
-              />
+              {passwordshowBtn === true ? <FaEye onClick={passwordShow} id="passwordShow" /> : <FaEyeSlash onClick={passwordShow} id="passwordShow"/>}
             </div>
             <br />
             <div className="registerInputDiv">
-              <img src={lockLogo} alt="" width="18px" />
+              <FaLock />
               <input
                 type="password"
                 placeholder="Confirm Password"
                 name="Cpassword"
                 autoComplete="off"
-                id="RegisterInput"
                 className="RegisterInput"
                 onChange={handleInput}
               />
-              <img
-                src={eyeClose}
-                alt=""
-                width="20px"
-                onClick={ConfirmpasswordShow}
-                id="ConfirmpasswordShow"
-              />
+              {CpasswordShowBtn === true ? <FaEye onClick={ConfirmpasswordShow} id="ConfirmpasswordShow"/> : <FaEyeSlash onClick={ConfirmpasswordShow} id="ConfirmpasswordShow"/>}
             </div>
             <br />
             <br />
