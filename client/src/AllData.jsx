@@ -1,54 +1,62 @@
-import Insta from "./Images/Insta.png";
-import Facebook from "./Images/facebookk.png";
-import Twitter from "./Images/Twitter.png";
-import Github from "./Images/github.png";
-import Linkedin from "./Images/Linkedin.png";
-import FrontImg from "./Images/Shubham.jpg";
+// import Insta from "./Images/Insta.png";
+// import Facebook from "./Images/facebookk.png";
+// import Twitter from "./Images/Twitter.png";
+// import Github from "./Images/github.png";
+// import Linkedin from "./Images/Linkedin.png";
+// import FrontImg from "./Images/Shubham.jpg";
 import Portfolio from "./Images/ProjectPortfolio.png";
-import Quotes from "./Images/ProjectQuotes.png";
-import Password from "./Images/ProjectPassword.png";
-import Hotstar from "./Images/ProjectHotstar.png";
-import DigitalClock from "./Images/ProjectDigital.png";
-import formore from "./Images/Click.png";
-import Shubham2 from "./Images/Shubham2.png";
-import LoginRegister from "./Images/MERNLoginRegister.png";
+// import Quotes from "./Images/ProjectQuotes.png";
+// import Password from "./Images/ProjectPassword.png";
+// import Hotstar from "./Images/ProjectHotstar.png";
+// import DigitalClock from "./Images/ProjectDigital.png";
+// import formore from "./Images/Click.png";
+// import Shubham2 from "./Images/Shubham2.png";
+// import LoginRegister from "./Images/MERNLoginRegister.png";
 const Data = {
   SocialLogo: [
     {
       text: "Instagram",
-      logo: Insta,
+      // logo: Insta,
+      logo: "https://drive.google.com/uc?export=view&id=1UXDaWY8dLP-bAORVKMTFSuCIQNduzisg",
       link: "https://www.instagram.com/invites/contact/?i=1k3g7gxwflgz0&utm_content=2of27u2",
     },
-
+    
     {
       text: "Facebook",
-      logo: Facebook,
+      logo: "https://drive.google.com/uc?export=view&id=17xVqgx_qXEuGCS5gEBvgD_GjmDOGrKj2",
+      // logo: Facebook,
       link: "https://www.facebook.com/shubham.joshi.733076",
     },
     {
       text: "Github",
-      logo: Github,
+      // logo: Github,
+      logo: "https://drive.google.com/uc?export=view&id=12Yqq8hH_Bq2TfSSgT5cdftesHBd2EpAI",
       link: "https://github.com/ShubhamJoshii",
     },
     {
       text: "Linkedin",
-      logo: Linkedin,
+      // logo: Linkedin,
+      logo: "https://drive.google.com/uc?export=view&id=13gaVCQfrc--k3S6thKwscrjMAxCBZ9gx",
       link: "https://www.linkedin.com/in/shubham-joshi-86aaa6232",
     },
     {
       text: "Twitter",
-      logo: Twitter,
+      // logo: Twitter,
+      logo: "https://drive.google.com/uc?export=view&id=1uUrPi-RrDQAK44guA7Fz7WoILvkoWevI" ,
       link: "https://twitter.com/Shubham49439428",
     },
   ],
-  MainPageImg: FrontImg,
+  // MainPageImg: FrontImg,
+  MainPageImg: "https://drive.google.com/uc?export=view&id=1YDuQIL-dhtsO0QNWfL3osIqatS4Y9p_t",
   resume:
     "https://drive.google.com/file/d/170t40CWF0c0pLFkfXWJmqu7MMjPYWeO6/view?usp=sharing",
-  Shubham2,
+  // Shubham2:Shubham2,
+  Shubham2:"https://drive.google.com/uc?export=view&id=1AD57aY-bAYQ0sp6eVmJlWKNIYdOBLgmp",
   Project: [
     {
       text: "Portfolio(MERN)",
       Image: Portfolio,
+      Image:"https://drive.google.com/uc?export=view&id=1MnpStpqDhH9d_P3GuycKdkhezHLVddq8",
       link: "https://shubhamjoshii.github.io/Portfolio2.0/",
       Github: "https://github.com/ShubhamJoshii/Portfolio2.0",
       para: "Language Use ",
@@ -56,7 +64,8 @@ const Data = {
     },
     {
       text: "Login-Register (MERN)",
-      Image: LoginRegister,
+      // Image: LoginRegister,
+      Image:"https://drive.google.com/uc?export=view&id=1zrTqEs9eNbhB-JGcFd8e_2ljKxFUYazY",
       link: "https://mern-project-ten.vercel.app/",
       Github: "https://github.com/ShubhamJoshii/LoginRegister",
       para: "I Made this project With React routing,Node(Cookie-Parser,Mongoose,JSONwebtoken,bcrypt) and many More",
@@ -64,7 +73,8 @@ const Data = {
     },
     {
       text: "Hotstar Clone",
-      Image: Hotstar,
+      // Image: Hotstar,
+      Image:"https://drive.google.com/uc?export=view&id=11mWyVLn3XE3q5OGx8sIzsOZKzofYV-1I",
       link: "https://shubhamjoshii.github.io/Hotstar-Clone/",
       Github: "https://github.com/ShubhamJoshii/Hotstar-Clone",
       para: "Language Use ",
@@ -72,7 +82,8 @@ const Data = {
     },
     {
       text: "Quotes Generator",
-      Image: Quotes,
+      // Image: Quotes,
+      Image:"https://drive.google.com/uc?export=view&id=1E2DTU4SV7OB-_VyWXUf_OXS-qES43djy",
       link: "https://shubhamjoshii.github.io/quotesGenerator/",
       Github: "https://github.com/ShubhamJoshii/quotesGenerator",
       para: "Language Use ",
@@ -80,7 +91,8 @@ const Data = {
     },
     {
       text: "Digital Clock",
-      Image: DigitalClock,
+      // Image: DigitalClock,
+      Image:"https://drive.google.com/uc?export=view&id=1MExFvNk6HLyCwNqnWzdff60MMsxL8Qxm",
       link: "https://shubhamjoshii.github.io/Digital-Clock/",
       Github: "https://github.com/ShubhamJoshii/Digital-Clock",
       para: "Language Use ",
@@ -88,7 +100,8 @@ const Data = {
     },
     {
       text: "Password Generator",
-      Image: Password,
+      // Image: Password,
+      Image:"https://drive.google.com/uc?export=view&id=1OJmH969lwPeKH1o6GlYvbBzt3g_417US",
       link: "https://shubhamjoshii.github.io/PasswordGenerator/",
       Github: "https://github.com/ShubhamJoshii/PasswordGenerator",
       para: "Language Use ",
@@ -96,7 +109,8 @@ const Data = {
     },
     {
       text: "For more Click Here!",
-      Image: formore,
+      // Image: formore,
+      Image:"https://drive.google.com/uc?export=view&id=1X8sDAzFhfTZ2U_Zz6WNfmps8CJ1ujtmA",
       link: "https://github.com/ShubhamJoshii",
       Github: "https://github.com/ShubhamJoshii",
     },
