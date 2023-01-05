@@ -1,0 +1,83 @@
+.RegisterContainer{
+    padding-top: 6vh;
+    background-color: #0f3d3e;
+    /* height: 94vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Register{
+    background-color: #121418;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    width: 70vw;
+}
+
+.Register h1{
+    margin-bottom: 10px;
+}
+
+.RegisterForm{
+    display: flex;
+    justify-content: center;
+    width: 70vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* height: 230px; */
+}
+
+.Register #submitBTN{
+    text-align: center;
+    font-weight: 700;
+    width: 210px;
+    padding: 10px;
+    font-size: 17px;
+    color: white;
+    margin: 10px 0px;
+    background: linear-gradient(to right, #0f3d3e,#00e1ff7a);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.Register #submitBTN:hover{
+    transform: scale(1.1);
+}
+
+.RegisterForm form{
+    width: 660px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registerInputDiv{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 330px;
+    background: rgb(42, 39, 39);
+    padding: 5px 10px;
+}
+.RegisterForm .RegisterInput{
+    text-align: center;
+    font-weight: 700;
+    width: 90%;
+    padding: 3px;
+    font-size: 17px;
+    color: white;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.optionGender{
+    background-color: #121418;
+}
+

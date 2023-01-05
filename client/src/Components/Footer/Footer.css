@@ -1,0 +1,84 @@
+footer {
+  /* height: 30vh; */
+  background: linear-gradient(8deg, var(--footerBg) 50%, var(--footerBg2) 50%);
+  display: flex;
+  justify-content: center;
+}
+
+.footer_First {
+  width: 20vw;
+  font-size: 200px;
+  font-family: Constantia;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.621);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  /* margin-top: -40px; */
+}
+
+.footer_Second {
+  width: 55vw;
+  color: #00000069;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 110px;
+  font-family: fantasy;
+}
+
+#LineOuter {
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+}
+
+.lines {
+  width: 2px;
+  height: 80%;
+  background-color: #fffefe;
+}
+
+.footer_Third {
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_Third a {
+  margin-top: 10px;
+}
+
+#SocialImg {
+  transition: 1ms;
+  /* border-radius: 20px; */
+}
+
+#SocialImg:hover {
+  /* box-shadow: 0px 0px -1px white; */
+  transform: scale(1.2);
+}
+
+.DateFooter {
+  background-color: #000000;
+  color: white;
+  width: 100vw;
+  text-align: center;
+  /* padding: 0px 50px; */
+}
+
+.DateFooter {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: 0px 100px; */
+  justify-content: space-evenly;
+}
+
+.DateFooter p {
+  text-align: center;
+  /* width: 50%; */
+  font-size: 12px;
+}

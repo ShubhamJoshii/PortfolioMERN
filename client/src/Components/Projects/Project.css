@@ -1,0 +1,108 @@
+
+.ContentPage2 {
+  background-color: var(--bgColor);
+  color: var(--textColor);
+  /* height: 100vh; */
+  padding: 50px 0px;
+  border-bottom: 1px dotted var(--textColor);
+  border-top: 1px dotted var(--textColor);
+}
+
+.slideBtn {
+  /* width: 1px; */
+  position: absolute;
+  top: 87vh;
+}
+.slideBtn img {
+  width: 100px;
+}
+
+#externalLink {
+  font-size: 35px;
+  color: white;
+}
+
+.ContentPage2 h1 {
+  font-size: 70px;
+  font-family: cursive;
+  text-align: center;
+  padding-top: 10px;
+}
+.ProjectSumm {
+  display: flex;
+  text-align: center;
+  margin: 20px 0px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.ProjectSummInner {
+  margin: 30px 0px;
+  /* animation-name: Effect;
+  animation-duration: 4s; */
+}
+
+.ProjectSummInner:hover {
+  transform: scale(1.1);
+}
+
+.ProjectImg {
+  width: 325px;
+  height: 205px;
+  /* background-color: aliceblue; */
+  background-color: var(--textColor);
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.ProjectImg a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.ProjectImg #projectImg {
+  border-radius: 20px;
+  width: 95%;
+  color: black;
+  /* position: relative; */
+  height: 90%;
+}
+
+.ProjectImg #onhoverLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ProjectImg #onhoverLinks a {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.ProjectImg .onhover {
+  width: 20%;
+  height: 70%;
+  position: absolute;
+  color: white;
+  display: none;
+}
+
+.ProjectImg:hover .onhover {
+  width: 90%;
+  background: linear-gradient(#0000002a, #0000007d, #000000);
+  border-radius: 10px;
+  padding: 10px;
+  display: block;
+  font-size: 15px;
+}
+
+.ExtLink {
+  color: white;
+  font-size: 40px;
+  /* width: ; */
+}
+.onhover a {
+  text-decoration: none;
+}

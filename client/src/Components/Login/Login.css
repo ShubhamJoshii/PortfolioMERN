@@ -1,0 +1,168 @@
+.LoginContainer {
+  padding-top: 6vh;
+  background-color: #0f3d3e;
+  height: 94vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  background-color: #121418;
+  color: white;
+  padding: 50px;
+  text-align: center;
+  width: 70vw;
+}
+
+.login h1 {
+  margin-bottom: 10px;
+}
+
+.loginForm {
+  display: flex;
+  width: 70vw;
+  height: 230px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.login #submitBTN {
+  text-align: center;
+  font-weight: 700;
+  width: 220px;
+  padding: 10px;
+  font-size: 17px;
+  color: white;
+  margin: 10px 0px;
+  background: linear-gradient(to right, #0f3d3e, #00e1ff7a);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.login #submitBTN:hover {
+  transform: scale(1.1);
+}
+
+.loginForm form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginInput_Div {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 330px;
+  /* width: 50%; */
+  padding: 5px 10px;
+  /* font-size: 17px; */
+  /* color: white; */
+  /* margin: 0px 5px; */
+  background: rgb(42, 39, 39);
+  /* outline: none; */
+  /* border: none; */
+}
+
+.loginForm .loginInput {
+  /* border-radius: 10px; */
+  text-align: center;
+  font-weight: 700;
+  width: 90%;
+  padding: 3px;
+  font-size: 17px;
+  color: white;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.loginForm .loginType {
+  width: 50%;
+}
+
+.loginType {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.loginType .loginTypeDiv {
+  background: none;
+  cursor: pointer;
+  /* border: 1px solid red; */
+  background: linear-gradient(to right, red, #00e1ff7a, yellow, blue);
+  padding: 2px;
+  color: white;
+  text-align: left;
+  margin-bottom: 20px;
+  width: 400px;
+  /* width: 25vw; */
+}
+
+.loginTypeDiv:hover {
+  transform: scale(1.05);
+}
+
+.loginTypeDiv div {
+  padding: 10px;
+  background: #121418;
+  display: flex;
+  align-items: center;
+}
+
+.loginForm div img {
+  margin-right: 10px;
+}
+
+.login #loginTypeAwesome {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.login #forget {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1270px) {
+  .login {
+    height: 80%;
+  }
+
+  .loginForm {
+    align-items: center;
+    flex-direction: column;
+    /* width: 90vw; */
+  }
+  .loginForm form {
+    width: 100%;
+  }
+  .loginForm .loginType {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .login #forget {
+    cursor: pointer;
+    margin-top: -50px;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .loginForm form {
+    width: 90vw;
+  }
+  /* .loginForm form input {
+    width: 50%;
+  } */
+}

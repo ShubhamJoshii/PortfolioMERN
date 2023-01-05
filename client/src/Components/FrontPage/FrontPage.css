@@ -1,0 +1,121 @@
+.ContentPage1 {
+  background-color: #000000;
+  background: rgba(0, 0, 0, 0.6) url("../../Images/background.jpg");
+  /* filter: blur(1px); */
+  height: 92vh;
+  padding-top: 60px;
+  background-blend-mode: darken;
+  /* background-position: ; */
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Page3First {
+  /* opacity: 0.5; */
+  background-color: white;
+  border-radius: 20px;
+}
+/* 
+.Page3First img{
+  animation-name: BlurLoader;
+  animation-duration: 2s;
+} */
+
+@keyframes BlurLoader {
+  0% {
+    filter: blur(1.5px);
+  }
+  50% {
+    filter: blur(1px);
+  }
+  75% {
+    filter: blur(0.5px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+#FrontImg {
+  border-radius: 50%;
+  width: 300px;
+  /* border: 5px solid #ff3c00c4; */
+  /* border: 10px solid white; */
+  border: 5px solid rgba(255, 230, 0, 0.658);
+  animation-name: FrontImgAnimation;
+  animation-duration: 1s;
+  filter: contrast(1.1);
+}
+
+@keyframes FrontImgAnimation {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+.First_second {
+  color: #fffefe;
+  font-family: cursive;
+  width: 40vw;
+  margin-left: 100px;
+}
+
+.First_second h1 {
+  font-size: 60px;
+}
+.First_second h2 {
+  font-size: 23px;
+}
+
+.First_second #TextPara3 {
+  color: #ff0000;
+}
+
+.First_second #TextPara2 {
+  text-shadow: 0px 0px 30px #ff0000;
+  text-decoration: dashed;
+}
+
+.AutotypeRemove {
+  animation: blink 1.5s linear infinite;
+}
+
+@keyframes blink {
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.modeChange {
+  position: fixed;
+  top: 8vh;
+  right: 15px;
+}
+
+.modesDarkLight {
+  font-size: 35px;
+  color: rgb(105, 102, 102);
+}
+
+/* 
+.ContentPage1 #ToTopBtn{
+  display: none;
+} */

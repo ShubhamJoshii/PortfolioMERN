@@ -1,21 +1,20 @@
-import ContentPage1 from "./ContentPage1"
-import ContentPage2 from "./ContentPage2"
-import ContentPage3 from "./ContentPage3"
-import ContentPage4 from "./ContentPage4"
-import ContentPage5 from "./ContentPage5"
-import Footer from "./Footer"
-import Header from "./header"
+import FrontPage from "./Components/FrontPage/FrontPage"
+import Projects from "./Components/Projects/Projects"
+import AboutPage from "./Components/AboutMe/AboutPage"
+import Certificates from "./Components/Certificates/Certificates"
+import Contact from "./Components/ContactUs/Contact"
+import Footer from "./Components/Footer/Footer"
+// import Header from "./Components/Header/header"
 import React from 'react'
 
 function MainPage() {
   return (
     <>
-
-        <ContentPage1 />
-        <ContentPage3 />
-        <ContentPage2 />
-        <ContentPage4 />
-        <ContentPage5 />
+        <FrontPage />
+        <AboutPage />
+        <Projects />
+        <Certificates />
+        <Contact />
         <Footer />
     </>
   )
