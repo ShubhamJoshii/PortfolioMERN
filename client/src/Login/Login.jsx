@@ -4,8 +4,9 @@ import { FaFacebookF,FaGoogle,FaApple,FaLock,FaEye,FaEyeSlash} from "react-icons
 import { SiGmail} from "react-icons/si";
 // import {GrMail} from "react-icons/gr";
 import "./Login.css";
+import { useEffect } from "react";
 
-function Login() {
+function Login({setShow}) {
   const [loginData, setLoginData] = useState({});
   // const [eye,setEye] = useState(<FaEyeSlash id="passwordShow"/>)
   const [eye,setEye] = useState(true)
@@ -31,15 +32,17 @@ function Login() {
       alert(Data.message);
       if (Data.message === "User Login") {
         navigate("/");
+        setShow(false)
         window.location.reload(false);
       }
     } catch (err) {
       alert("User Not Registered");
+      
       navigate("/register");
       console.log(err);
     }
   };
-
+  
   const passwordShow = ()=>{
     let a = document.getElementsByClassName("password")[0];
     if(a.type === "password"){
@@ -51,6 +54,10 @@ function Login() {
       setEye(true) 
     }  
   }
+  
+  useEffect(()=>{
+    setShow(true)
+  },[])
 
   return (
     <div className="LoginContainer">

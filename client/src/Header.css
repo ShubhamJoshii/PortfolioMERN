@@ -13,6 +13,10 @@
     cursor: pointer;
 }
 
+
+
+
+
 .loginRegister button:hover{
     transform: scale(1.01);
     border-bottom:3px solid red;
@@ -41,12 +45,16 @@
 .userDP:hover .loginRegister{
     display: block;
 }
+
+
 .loginRegister{
+    height: 15vh;
     display: none;
     position: fixed;
     right: 2vw;
     top: 5vh;
-    background-color: rgba(0, 0, 0, 0.445);
+    /* background-color: rgba(0, 0, 0, 0.445); */
+    background-color: rgb(0, 0, 0);
     width: 110px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -61,11 +69,11 @@
     cursor: pointer;
 }
 .loginRegister h3:hover{
-    background-color: black;
+    background-color: rgba(255, 255, 255, 0.182);
     font-weight: 700;
 }
 
-@media only screen and (max-width: 655px){
+@media only screen and (max-width: 750px){
     .userDP{
         right: 13vw;
     }

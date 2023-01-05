@@ -59,7 +59,8 @@ const ContentPage5 = () => {
         <h1>Contact Me</h1>
         <div className="Contact1Inner">
           <img
-            src={Gmail}
+            // src={Gmail}
+            src="https://drive.google.com/uc?export=view&id=1fimdDrg9F-rfl1-0vE7WmTp2FQUe8WbK"
             alt="GmailLogo"
             className="LogoColorChange"
             width="25px"
@@ -68,7 +69,8 @@ const ContentPage5 = () => {
         </div>
         <div className="Contact1Inner">
           <img
-            src={Phone}
+            // src={Phone}
+            src="https://drive.google.com/uc?export=view&id=1fimdDrg9F-rfl1-0vE7WmTp2FQUe8WbK"
             alt="PhoneLogo"
             className="LogoColorChange"
             width="25px"

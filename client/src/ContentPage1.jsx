@@ -65,7 +65,8 @@ const ContentPage1 = () => {
         </div>
         <div className="slideBtn">
           <a href="#AboutMe">
-            <img src={arrowDown} alt="Arrow Down" />
+            <img src="https://drive.google.com/uc?export=view&id=1nIDoKl3rDhwxgjIBCRgbI9zHbB4smZ4_" alt="Arrow Down" />
+            {/* <img src={arrowDown} alt="Arrow Down" /> */}
           </a>
         </div>
       </div>
