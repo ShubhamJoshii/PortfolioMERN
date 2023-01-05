@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaFacebookF,FaGoogle,FaApple,FaUserAlt,FaLock,FaEye,FaEyeSlash} from "react-icons/fa";
+import { FaFacebookF,FaGoogle,FaApple,FaLock,FaEye,FaEyeSlash} from "react-icons/fa"
+import { SiGmail} from "react-icons/si";
+// import {GrMail} from "react-icons/gr";
 import "./Login.css";
 
 function Login() {
@@ -63,7 +65,8 @@ function Login() {
           <form action="" method="POST">
             <h1>Login Details</h1>
             <div className="loginInput_Div">
-              <FaUserAlt />
+              <SiGmail />
+              {/* <GrMail /> */}
               <input
                 type="text"
                 placeholder="Enter Email ID"

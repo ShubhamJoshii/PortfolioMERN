@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {FaUserAlt,FaLock,FaEye,FaEyeSlash,FaPhoneAlt} from "react-icons/fa";
 import { MdWork } from "react-icons/md";
+import { SiGmail} from "react-icons/si";
 
 import "./Register.css";
 function Register() {
@@ -117,7 +118,7 @@ function Register() {
             </div>
             <br />
             <div className="registerInputDiv">
-              <FaUserAlt />
+              <SiGmail />
               <input
                 type="text"
                 placeholder="Enter Email ID"

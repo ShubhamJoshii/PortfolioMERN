@@ -10,7 +10,7 @@ import Password from "./Images/ProjectPassword.png";
 import Hotstar from "./Images/ProjectHotstar.png";
 import DigitalClock from "./Images/ProjectDigital.png";
 import formore from "./Images/Click.png";
-import Shubham2 from "./Images/Shubham2.jpg";
+import Shubham2 from "./Images/Shubham2.png";
 import LoginRegister from "./Images/MERNLoginRegister.png";
 const Data = {
   SocialLogo: [
