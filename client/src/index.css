@@ -181,6 +181,7 @@ input:-webkit-autofill {
   .Header ol li {
     margin-top: 5px;
     width: 90%;
+    padding: 1px 10px;
   }
 
   .Header ol ul {
@@ -206,7 +207,8 @@ input:-webkit-autofill {
     width: 100px;
     background-color: #000000;
     align-items: flex-start;
-    padding: 10px;
+    /* overflow: hidden; */
+    padding: 5px 10px 5px 0px;
   }
   .Header:hover .Orderheader {
     opacity: 1;
@@ -256,7 +258,7 @@ input:-webkit-autofill {
   #FrontImg {
     width: 225px;
   }
-
+  
   /* #ToTopBtn{
     top: 93vh;
     right: -4vw;
@@ -290,6 +292,17 @@ input:-webkit-autofill {
   }
 
   .Page3Second button {
+    width: auto;
     margin-right: 10px;
+  }
+  
+  .loginType .loginTypeDiv{
+    width: 85vw;
+  }
+}
+
+  @media only screen and (max-height: 740px) {
+  .LoginContainer{
+    height: 120vh;
   }
 }

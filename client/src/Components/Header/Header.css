@@ -144,14 +144,14 @@ li a {
 
 
 .loginRegister{
+  top: 5vh;
+  right: 5px;
   height: 15vh;
+  width: 120px;
   display: none;
   position: fixed;
-  right: 2vw;
-  top: 5vh;
   /* background-color: rgba(0, 0, 0, 0.445); */
   background-color: rgb(0, 0, 0);
-  width: 110px;
   padding-top: 20px;
   padding-bottom: 20px;
 }

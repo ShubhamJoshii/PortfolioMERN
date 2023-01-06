@@ -74,7 +74,8 @@ const Contact = () => {
         <div className="Contact1Inner">
           <img
             // src={Phone}
-            src="https://drive.google.com/uc?export=view&id=1fimdDrg9F-rfl1-0vE7WmTp2FQUe8WbK"
+            src="https://drive.google.com/uc?export=view&id=1TzNyCn-y2mrd6OjAYpF2YWkIBKWeYpWq
+"
             alt="Contact"
             className="LogoColorChange"
             width="25px"
