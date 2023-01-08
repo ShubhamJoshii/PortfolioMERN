@@ -115,6 +115,26 @@ const Data = {
       Github: "https://github.com/ShubhamJoshii",
     },
   ],
+  Certificates: [
+    {
+      text: "Programming, Data Structure and Algorithms Using Python",
+      Image:"https://drive.google.com/uc?export=view&id=11-72RWPVI7QHlqeBpubVVi18fykaawLE",
+      link: "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL22CS70S1324179809017022",
+      para: "National Programme on Technology Enhanced Learning Certification on Programming, Data Structure and Algorithms Using Python"
+    },
+    {
+      text: "Frontend Bootcamp on React ",
+      Image:"https://drive.google.com/uc?export=view&id=1JassuzCPndQZq1MNKrGoH4D_nZz6uWFe",
+      link: "https://cert.devtown.in.tech/verify/1HlT6P",
+      para: "In this Bootcamp we Basic Learn about React Library and Frontend"
+    },
+    {
+      text: "Backend Bootcamp on Express",
+      Image:"https://drive.google.com/uc?export=view&id=14PXDES_iMD_GXwfdEnD9yiG9L17Wf-fY",
+      link: "https://cert.devtown.in.tech/verify/1fdHoE",
+      para: "In this Bootcamp we Basic Learn about (Express) Node and Postman.Conducted by Microsoft Learn Student Ambassador"
+    },
+  ],
   Certificate: [
     {
       text: "NPTEL",
