@@ -22,6 +22,7 @@ body {
 .darkmode {
   --bgColor: black;
   --textColor: white;
+  /* --logoColor: invert(); */
   --footerBg: black;
   --footerBg2: #0f3d3e;
   --contactInputbg: #1d1d1a;

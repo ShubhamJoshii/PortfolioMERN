@@ -10,7 +10,7 @@ const Certificate = () => {
         {Data.Certificates.map((curr, id) => {
           return (
             <div className="CertificatesSummInner" key={id}>
-              <div className="ProjectImg">
+              <div className="CertificateImg">
                 <a>
                   <img src={curr.Image} alt="Certificates" id="projectImg" />
                   <div className="onhover">

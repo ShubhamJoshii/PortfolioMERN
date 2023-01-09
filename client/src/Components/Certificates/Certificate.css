@@ -46,7 +46,7 @@
     transform: scale(1.1);
   }
   
-  .ProjectImg {
+  .CertificateImg {
     width: 325px;
     height: 205px;
     /* background-color: aliceblue; */
@@ -55,14 +55,14 @@
     margin-bottom: 10px;
   }
   
-  .ProjectImg a {
+  .CertificateImg a {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
   }
   
-  .ProjectImg #projectImg {
+  .CertificateImg #projectImg {
     border-radius: 20px;
     width: 95%;
     color: black;
@@ -74,18 +74,22 @@
   width: 325px;
 }
 
-  .ProjectImg #onhoverLinks {
+  .CertificateImg #onhoverLinks {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    bottom: 10%;
+    left: 45%;
+    
   }
   
-  .ProjectImg #onhoverLinks a {
+  .CertificateImg #onhoverLinks a {
     margin-right: 20px;
     margin-top: 20px;
   }
   
-  .ProjectImg .onhover {
+  .CertificateImg .onhover {
     width: 20%;
     height: 70%;
     position: absolute;
@@ -93,8 +97,8 @@
     display: none;
   }
   
-  .ProjectImg:hover .onhover {
-    width: 90%;
+  .CertificateImg:hover .onhover {
+    width: 100%;
     background: linear-gradient(#0000002a, #0000007d, #000000);
     border-radius: 10px;
     padding: 10px;
