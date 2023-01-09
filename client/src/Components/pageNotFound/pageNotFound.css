@@ -1,0 +1,61 @@
+.PageNotFound{
+    position: relative;
+    top: 6vh;
+    height: 94vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+.PageNotFound #error404{
+    color: rgba(0, 0, 0, 0.262);
+    position: absolute;
+    font-size: 300px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 94%;
+}
+
+
+.PageNotFound h1{
+    z-index: 999999;
+    font-size: 47px;
+}
+.PageNotFound p{
+    z-index: 999999;
+    margin-top: 30px;
+}
+
+.PageNotFound #formBtn{
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    margin-top: 40px;
+    font-size: 25px;
+    z-index: 999999;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#error404 img{
+    width:600px
+}
+
+@media only screen and (max-width:450px){
+    #error404 img{
+        width: 500px;
+    }
+
+}
+
+@media only screen and (max-width:370px){
+    #error404 img{
+        width: 400px;
+    }
+}
