@@ -2,9 +2,9 @@ import Data from "../../AllData";
 // import Gmail from "../Images/GmailLogo.png";
 // import Phone from "../Images/ContactPhone.png";
 // import Phone from "../Images/phone.png";
-// import Gmail from "../Images/Gmail.png";
-import { useState,useEffect } from "react";
-import "./Contact.css"
+import resume from "../../Images/Resume_ShubhamJoshi.pdf";
+import { useState, useEffect } from "react";
+import "./Contact.css";
 const Contact = () => {
   const [contactData, setContactData] = useState({
     name: "",
@@ -22,40 +22,40 @@ const Contact = () => {
     e.preventDefault();
     const { name, email, message } = contactData;
     // console.log(name,email,message)
-    try{
-      const res = await fetch("/contactMessage",{
-        method:"POST",
-        headers:{
-          "Content-Type":"application/json"
-        },
-        body:JSON.stringify({name, email, message})
-      })
-      const Data = await res.json();
-      alert(Data.message)
-      setContactData({message:" "})
-    } catch(err){
-      alert("Plz Login for Sending Message")
-    }
-  };
-
-  const loadCookies = async ()=>{
     try {
-      const res = await fetch("/contact",{
+      const res = await fetch("/contactMessage", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify()
+        body: JSON.stringify({ name, email, message }),
+      });
+      const Data = await res.json();
+      alert(Data.message);
+      setContactData({ message: " " });
+    } catch (err) {
+      alert("Plz Login for Sending Message");
+    }
+  };
+
+  const loadCookies = async () => {
+    try {
+      const res = await fetch("/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(),
       });
       const data = await res.json();
-      setContactData({...contactData,name:data.name,email:data.email})
+      setContactData({ ...contactData, name: data.name, email: data.email });
     } catch (err) {
       console.log(err);
     }
-  }
-  useEffect(()=>{
-    loadCookies()
-  },[])
+  };
+  useEffect(() => {
+    loadCookies();
+  }, []);
 
   return (
     <div className="ContentPage5" id="">
@@ -74,8 +74,7 @@ const Contact = () => {
         <div className="Contact1Inner">
           <img
             // src={Phone}
-            src="https://drive.google.com/uc?export=view&id=1TzNyCn-y2mrd6OjAYpF2YWkIBKWeYpWq
-"
+            src="https://drive.google.com/uc?export=view&id=1TzNyCn-y2mrd6OjAYpF2YWkIBKWeYpWq"
             alt="Contact"
             className="LogoColorChange"
             width="25px"
@@ -97,11 +96,29 @@ const Contact = () => {
             );
           })}
         </div>
-        <button>
-          <a href={Data.resume} id="CVdownload" rel="noopener noreferrer">
-            Download CV
-          </a>
-        </button>
+        <div id="Resume">
+          <button id="ResumeInner1">
+            <a
+              href={Data.resume}
+              id="CVdownload"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View CV
+            </a>
+          </button>
+          <button id="ResumeInner2">
+            <a
+              href={resume}
+              id="CVdownload"
+              target="_blank"
+              rel="noopener noreferrer"
+              download={resume}
+            >
+              Download CV
+            </a>
+          </button>
+        </div>
       </div>
       <div className="Contact2">
         <form action="" method="POST">
@@ -131,7 +148,9 @@ const Contact = () => {
             onChange={handleInput}
           ></textarea>
           <br />
-          <button type="submit" onClick={handleSubmit}>Submit</button>
+          <button type="submit" onClick={handleSubmit}>
+            Submit
+          </button>
         </form>
       </div>
     </div>

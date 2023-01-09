@@ -97,11 +97,11 @@ const Header = ({setShow,show}) => {
             })}
           </ul>
         </li>
-        {/* <li>
+        <li>
           <a href={Data.resume} target="_blank" rel="noopener noreferrer">
             Resume
           </a>
-        </li> */}
+        </li>
       </ol>
       <div className="userDP">
         {userName}

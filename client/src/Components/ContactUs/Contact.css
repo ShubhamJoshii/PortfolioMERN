@@ -47,19 +47,35 @@
   transform: scale(1.2);
 }
 
-.Contact1 button {
-  width: 100%;
-  border: 1px solid red;
-  font-size: 22px;
-  border-radius: 10px;
-  padding: 5px;
-  background-color: rgba(162, 14, 14, 0.852);
+
+#Resume{
+  display: flex;
+  
 }
 
 #CVdownload {
   color: white;
   text-decoration: none;
 }
+
+#ResumeInner1{
+  width: 50%;
+  border: 1px solid red;
+  font-size: 22px;
+  border-radius: 15px 0px 0px 15px;
+  padding: 5px;
+  background-color: rgba(162, 14, 14, 0.852);
+  
+}
+#ResumeInner2{
+  width: 50%;
+  border: 1px solid red;
+  font-size: 22px;
+  border-radius: 0px 15px 15px 0px;
+  padding: 5px;
+  background-color: rgba(162, 14, 14, 0.852);
+}
+
 
 .Contact2 {
   margin-left: -100px;

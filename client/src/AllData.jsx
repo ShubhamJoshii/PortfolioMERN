@@ -49,7 +49,7 @@ const Data = {
   // MainPageImg: FrontImg,
   MainPageImg: "https://drive.google.com/uc?export=view&id=1YDuQIL-dhtsO0QNWfL3osIqatS4Y9p_t",
   resume:
-    "https://drive.google.com/file/d/170t40CWF0c0pLFkfXWJmqu7MMjPYWeO6/view?usp=sharing",
+    "https://drive.google.com/uc?export=view&id=1PMaHBO4ZdWk5vPmwZritqht52KJ7SMx1",
   // Shubham2:Shubham2,
   Shubham2:"https://drive.google.com/uc?export=view&id=1AD57aY-bAYQ0sp6eVmJlWKNIYdOBLgmp",
   Project: [
