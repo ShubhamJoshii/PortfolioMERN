@@ -140,9 +140,9 @@ const AboutPage = () => {
           </div>
       </div>
       </div>
-      <a href="#home" id="ToTopBtn">
+      {/* <a href="#home" id="ToTopBtn">
           <FaArrowUp />
-      </a>
+      </a> */}
     </div>
   );
 };

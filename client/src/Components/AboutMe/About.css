@@ -61,7 +61,7 @@
   /* background-color: #bc2c4d; */
   border-bottom: 3px solid #bc2c4d;
 }
-
+/* 
 #ToTopBtn {
   padding: 10px;
   position: fixed;
@@ -73,11 +73,11 @@
   background-color: rgba(0, 0, 0, 0.725);
   font-size: 40px;
   font-weight: bolder;
-  color: white;
+  color: white; */
   /* text-align: center; */
   /* position: sticky; */
   /* left: 94.5vw; */
-}
+/* } */
 
 #topic {
   color: #7e2d36e3;

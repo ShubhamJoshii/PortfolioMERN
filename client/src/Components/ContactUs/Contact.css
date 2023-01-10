@@ -33,6 +33,9 @@
 
 .ContactSocialLogo {
   margin: 15px 0px 35px 0px;
+  display: flex;
+  justify-content:space-evenly;
+
 }
 
 .LogoColorChange {

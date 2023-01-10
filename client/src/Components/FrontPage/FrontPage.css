@@ -2,7 +2,7 @@
   background-color: #000000;
   background: rgba(0, 0, 0, 0.6) url("../../Images/background.jpg");
   /* filter: blur(1px); */
-  height: 92vh;
+  height: 95vh;
   padding-top: 60px;
   background-blend-mode: darken;
   /* background-position: ; */
@@ -50,6 +50,24 @@
   animation-duration: 1s;
   filter: contrast(1.1);
 }
+
+
+
+#ToTopBtn{
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+  border-radius:10px;
+  padding: 7px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 50px; */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.56);
+}
+
 
 @keyframes FrontImgAnimation {
   0% {
