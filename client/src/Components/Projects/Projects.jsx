@@ -1,13 +1,17 @@
 import Data from "../../AllData";
 import { FaExternalLinkAlt,FaGithub } from "react-icons/fa";
 import "./Project.css"
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Projects = () => {
+  AOS.init();
   return (
     <div className="ContentPage2">
       <h1>Projects</h1>
       <div className="ProjectSumm">
         {Data.Project.map((curr, id) => {
           return (
+            <div data-aos="zoom-in">
             <div className="ProjectSummInner" key={id}>
               <div className="ProjectImg">
                 <a>
@@ -33,6 +37,7 @@ const Projects = () => {
                 </a>
               </div>
               <h2>{curr.text}</h2>
+            </div>
             </div>
           );
         })}
