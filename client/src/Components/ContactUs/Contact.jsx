@@ -4,6 +4,7 @@ import Data from "../../AllData";
 // import Phone from "../Images/phone.png";
 import resume from "../../Images/Resume_ShubhamJoshi.pdf";
 import { useState, useEffect } from "react";
+// import {Data} from "../../AllData"
 import "./Contact.css";
 const Contact = () => {
   const [contactData, setContactData] = useState({
@@ -11,7 +12,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
-
+  const contactNumber = Data.contactNumber.substring(0, 6) + "****";
   const handleInput = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -66,23 +67,23 @@ const Contact = () => {
             // src={Gmail}
             src="https://drive.google.com/uc?export=view&id=1fimdDrg9F-rfl1-0vE7WmTp2FQUe8WbK"
             alt="Gmail"
-            className="LogoColorChange"
+            className="LogoColorChange1"
             width="25px"
           />
-          <h3>shubhamjoshii676@gmail.com</h3>
+          <h3>{Data.EmailID}</h3>
         </div>
         <div className="Contact1Inner">
           <img
             // src={Phone}
             src="https://drive.google.com/uc?export=view&id=1TzNyCn-y2mrd6OjAYpF2YWkIBKWeYpWq"
             alt="Contact"
-            className="LogoColorChange"
+            className="LogoColorChange1"
             width="25px"
           />
-          <h3>880024****</h3>
+          <h3>{contactNumber}</h3>
         </div>
         <div className="ContactSocialLogo">
-          {/* LogoColorChange */}
+          {/* LogoColorChange1 */}
           {Data.SocialLogo.map((curr, id) => {
             return (
               <a

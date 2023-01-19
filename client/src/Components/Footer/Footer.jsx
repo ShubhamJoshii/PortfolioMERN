@@ -34,8 +34,8 @@ const Footer = () => {
       </footer>
       <div className="DateFooter">
           <p>TERMS & CONDITIONS PRIVACY POLICY</p>
-          <p id="lastUpdate">Last Update 05 January 2023</p>
-          <p>Copyright 2022 ©️ Shubham Joshi.{/* {timing} | */}</p>
+          <p id="lastUpdate">Last Update 20 January 2023</p>
+          <p>Copyright 2023 ©️ Shubham Joshi.{/* {timing} | */}</p>
       </div>
     </>
   );

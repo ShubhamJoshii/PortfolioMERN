@@ -11,7 +11,7 @@ const Projects = () => {
       <div className="ProjectSumm">
         {Data.Project.map((curr, id) => {
           return (
-            <div data-aos="zoom-in">
+            <div data-aos="zoom-in" key={id}>
             <div className="ProjectSummInner" key={id}>
               <div className="ProjectImg">
                 <a>

@@ -11,7 +11,7 @@ const Certificate = () => {
       <div className="CertificatesInner">
         {Data.Certificates.map((curr, id) => {
           return (
-            <div data-aos="zoom-in">
+            <div data-aos="zoom-in" key={id}>
             {/* <div
               data-aos="fade-down"
               data-aos-easing="linear"

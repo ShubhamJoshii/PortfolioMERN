@@ -86,6 +86,10 @@
   font-weight: bolder;
   cursor: pointer;
 }
+
+.subtopic{
+  cursor: pointer;
+}
 .SkillsOnHover {
   display: none;
   margin-left: 17vw;

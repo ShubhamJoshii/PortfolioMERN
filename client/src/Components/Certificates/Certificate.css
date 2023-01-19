@@ -91,10 +91,14 @@
   
   .CertificateImg .onhover {
     width: 20%;
-    height: 70%;
+    height: 80%;
     position: absolute;
     color: white;
     display: none;
+  }
+
+  .CertificateImg .onhover h2{
+    margin-top: 10px;
   }
   
   .CertificateImg:hover .onhover {
