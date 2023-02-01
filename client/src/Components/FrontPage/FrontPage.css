@@ -126,6 +126,7 @@
   position: fixed;
   top: 8vh;
   right: 15px;
+  cursor: pointer;
 }
 
 .modesDarkLight {

@@ -7,11 +7,11 @@ import Footer from "./Components/Footer/Footer"
 // import Header from "./Components/Header/header"
 import React from 'react'
 
-function MainPage() {
+function MainPage({AboutMe,Home}) {
   return (
     <>
-        <FrontPage />
-        <AboutPage />
+        <FrontPage Home={Home}/>
+        <AboutPage AboutMe={AboutMe}/>
         <Projects />
         <Certificates />
         <Contact />

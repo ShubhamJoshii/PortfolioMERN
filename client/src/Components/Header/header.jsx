@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
 import Data from "../../AllData";
 import "./Header.css";
-const Header = ({setShow,show}) => {
+const Header = ({setShow,show,AboutMe,Home}) => {
   // const [show, setShow] = useState(true);
   const [userName, setUserName] = useState("UN");
+  
   let navigate = useNavigate();
 
   const signinOUT = () => {
@@ -53,6 +54,13 @@ const Header = ({setShow,show}) => {
     }
   };
 
+  const scrollTosection = (elementRef)=>{
+    window.scrollTo({
+      top:elementRef.current.offsetTop,
+      behavior:"smooth"
+    })
+  }
+
   useEffect(() => {
     userData();
   }, []);
@@ -63,8 +71,8 @@ const Header = ({setShow,show}) => {
         <a href="#home">SHUBHAM JOSHI</a>
       </h1>
       <ol className="Orderheader">
-        <li onClick={() => navigate("/")}>Home</li>
-        <li>About Us</li>
+        <li onClick={() => {navigate("/");scrollTosection(Home) }}>Home</li>
+        <li onClick={()=>scrollTosection(AboutMe)}>About Us</li>
         <li>
           Contact
           <ul className="DropDown">

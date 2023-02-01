@@ -7,7 +7,7 @@ import TopBtn from "../../Images/ArrowTop.gif"
 import "./FrontPage.css";
 // import arrowDown from "../Images/Arrowdown.gif";
 
-const FrontPage = () => {
+const FrontPage = ({Home}) => {
   const [mode, setMode] = useState("darkmode");
   let NameText = "Shubham Joshi";
   let i = 0,
@@ -52,8 +52,6 @@ const FrontPage = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
-      /* you can also use 'auto' behaviour
-         in place of 'smooth' */
     });
   };
 
@@ -69,7 +67,7 @@ const FrontPage = () => {
 
   return (
     <>
-      <div className="ContentPage1" id="home">
+      <div className="ContentPage1" ref={Home} id="home">
         <div className="modeChange" onClick={modeChanger}>
           {mode === "darkmode" ? (
             <MdLightMode className="modesDarkLight" />

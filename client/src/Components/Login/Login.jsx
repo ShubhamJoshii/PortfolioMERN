@@ -54,7 +54,9 @@ function Login({setShow}) {
       setEye(true) 
     }  
   }
-  
+  const workOnIt = ()=>{
+    alert("We Are Working On it")
+  }
   useEffect(()=>{
     setShow(true)
   },[])
@@ -102,22 +104,23 @@ function Login({setShow}) {
               id="submitBTN"
               onClick={handleInputData}
             />
+          <p id="forget" onClick={workOnIt}>Forget Password?</p>
           </form>
           <div className="loginType">
-            <div className="loginTypeDiv">
+            <div className="loginTypeDiv" onClick={workOnIt}>
               <div>
                 <FaGoogle id="loginTypeAwesome"/>
                 Sign in with Google
               </div>
             </div>
-            <div className="loginTypeDiv">
+            <div className="loginTypeDiv" onClick={workOnIt}>
               <div>
                 <FaFacebookF  id="loginTypeAwesome"/>
                 Sign in with Facebook
 
               </div>
             </div>
-            <div className="loginTypeDiv">
+            <div className="loginTypeDiv" onClick={workOnIt}>
               <div>
                 <FaApple  id="loginTypeAwesome"/>
                  Sign in with Apple
@@ -125,7 +128,6 @@ function Login({setShow}) {
             </div>
           </div>
         </div>
-        <p id="forget">Forget Password?</p>
       </div>
     </div>
   );

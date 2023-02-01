@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import Data from "../../AllData";
-import { FaArrowUp } from "react-icons/fa";
 import "./About.css";
-const AboutPage = () => {
+const AboutPage = ({AboutMe}) => {
   // let i = TopicData.Skills;
   const [Count, setCount] = useState(0);
 
@@ -22,7 +21,7 @@ const AboutPage = () => {
 
   // console.log(Data.TopicData);
   return (
-    <div className="ContentPage3" id="AboutMe">
+    <div className="ContentPage3" ref={AboutMe} id="AboutMe">
       <div className="Page3First">
         <img src={Data.Shubham2} alt="ImageMain" />
       </div>
@@ -49,9 +48,6 @@ const AboutPage = () => {
             id="Btn2"
             onClick={() => {
               setCount(1);
-              // document.getElementsByClassName(
-              //   "lineSkillsColor"
-              // )[0].style.display = "none";
             }}
           >
             <div className="OverviewBtn">Experience</div>
@@ -59,9 +55,6 @@ const AboutPage = () => {
           <button
             onClick={() => {
               setCount(2);
-              // document.getElementsByClassName(
-              //   "lineSkillsColor"
-              // )[0].style.display = "none";
             }}
           >
             <div className="OverviewBtn">Education</div>
